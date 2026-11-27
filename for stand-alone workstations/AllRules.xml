@@ -1,5 +1,5 @@
 <AppLockerPolicy Version="1">
-  <RuleCollection Type="Appx" EnforcementMode="Enabled">
+  <RuleCollection Type="Appx" EnforcementMode="AuditOnly">
     <FilePublisherRule Id="311a94a9-047c-4702-9cb8-697632daa4d2" Name="All signed packaged apps" Description="Allows members of the Everyone group to run packaged apps that are signed." UserOrGroupSid="S-1-5-32-544" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
@@ -30,7 +30,7 @@
       </Exceptions>
     </FilePublisherRule>
   </RuleCollection>
-  <RuleCollection Type="Dll" EnforcementMode="Enabled">
+  <RuleCollection Type="Dll" EnforcementMode="AuditOnly">
     <FilePublisherRule Id="1d1b7197-3b28-4667-b137-79b98716057d" Name="Signed by MICROSOFT CORPORATION" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="*" BinaryName="*">
@@ -83,7 +83,7 @@
       </Conditions>
     </FilePathRule>
   </RuleCollection>
-  <RuleCollection Type="Exe" EnforcementMode="Enabled">
+  <RuleCollection Type="Exe" EnforcementMode="AuditOnly">
     <FilePublisherRule Id="1242dbca-19a7-4351-8298-4bd4edfb4d8d" Name="MICROSOFT ONEDRIVE" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT ONEDRIVE" BinaryName="*">
@@ -168,7 +168,7 @@
       </Conditions>
     </FilePathRule>
   </RuleCollection>
-  <RuleCollection Type="Msi" EnforcementMode="Enabled">
+  <RuleCollection Type="Msi" EnforcementMode="AuditOnly">
     <FilePublisherRule Id="88ce7854-007e-4652-9e45-16d4f67856d5" Name="MICROSOFT TEAMS MEETING ADD-IN FOR MICROSOFT OFFICE" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT TEAMS MEETING ADD-IN FOR MICROSOFT OFFICE" BinaryName="*">
@@ -187,7 +187,7 @@
       </Conditions>
     </FilePathRule>
   </RuleCollection>
-  <RuleCollection Type="Script" EnforcementMode="Enabled">
+  <RuleCollection Type="Script" EnforcementMode="AuditOnly">
     <FilePathRule Id="1a2b3c4d-5e6f-4789-a0b1-c2d3e4f5a6b7" Name="C:\Windows\*" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
         <FilePathCondition Path="%WINDIR%\*" />
