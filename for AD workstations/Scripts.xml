@@ -1,0 +1,47 @@
+<AppLockerPolicy Version="1">
+  <RuleCollection Type="Appx" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Dll" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Exe" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Msi" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Script" EnforcementMode="AuditOnly">
+    <FilePathRule Id="1a2b3c4d-5e6f-4789-a0b1-c2d3e4f5a6b7" Name="C:\Windows\*" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*" />
+      </Conditions>
+      <Exceptions>
+        <FilePathCondition Path="%SYSTEM32%\catroot2\*" />
+        <FilePathCondition Path="%SYSTEM32%\com\dmp\*" />
+        <FilePathCondition Path="%SYSTEM32%\FxsTmp\*" />
+        <FilePathCondition Path="%SYSTEM32%\Microsoft\Crypto\RSA\MachineKeys\*" />
+        <FilePathCondition Path="%SYSTEM32%\Spool\drivers\color\*" />
+        <FilePathCondition Path="%SYSTEM32%\Spool\PRINTERS\*" />
+        <FilePathCondition Path="%SYSTEM32%\Spool\SERVERS\*" />
+        <FilePathCondition Path="%SYSTEM32%\Tasks\*" />
+        <FilePathCondition Path="%SYSTEM32%\WindowsPowerShell\*" />
+        <FilePathCondition Path="%WINDIR%\debug\*" />
+        <FilePathCondition Path="%WINDIR%\Diagnostics\system\*" />
+        <FilePathCondition Path="%WINDIR%\Logs\PBR\*" />
+        <FilePathCondition Path="%WINDIR%\Panther\*" />
+        <FilePathCondition Path="%WINDIR%\pchealth\ERRORREP\*" />
+        <FilePathCondition Path="%WINDIR%\Performance\ServiceControl\*" />
+        <FilePathCondition Path="%WINDIR%\registration\*" />
+        <FilePathCondition Path="%WINDIR%\SysWOW64\com\dmp\*" />
+        <FilePathCondition Path="%WINDIR%\SysWOW64\FxsTmp\*" />
+        <FilePathCondition Path="%WINDIR%\SysWOW64\Tasks\*" />
+        <FilePathCondition Path="%WINDIR%\Tasks\*" />
+        <FilePathCondition Path="%WINDIR%\temp\*" />
+        <FilePathCondition Path="%WINDIR%\Tracing\*" />
+      </Exceptions>
+    </FilePathRule>
+    <FilePathRule Id="7f4b2c91-8e3d-4a1b-9c2f-5d6e7f8a9b0c" Name="C:\Program Files\*" Description="Allows members of the Everyone group to run applications that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%PROGRAMFILES%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="9e8d7c6b-5a4f-4321-8fed-cba987654321" Name="All files" Description="Allows members of the local Administrators group to run all applications." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+  </RuleCollection>
+</AppLockerPolicy>
